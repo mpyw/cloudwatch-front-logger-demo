@@ -1,0 +1,34 @@
+{
+  "name": "cloudwatch-front-logger-demo",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "cloudwatch-front-logger": "^1.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3"
+  },
+  "scripts": {
+    "prestart": "[ ! -d node_modules ] && npm ci || :",
+    "start": "trap 'docker-compose down; kill $$' SIGINT; docker-compose up & react-scripts start & wait",
+    "lint": "eslint src",
+    "postinstall": "[ ! -f .env ] && cp .env.example .env || :"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

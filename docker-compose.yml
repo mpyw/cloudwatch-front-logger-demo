@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  localstack:
+    image: localstack/localstack:latest
+    ports:
+      - "${REACT_APP_LOCALSTACK_EXTERNAL_EDGE_PORT:-4566}:4566"
+    environment:
+      DEBUG: '1'
+      SERVICES: logs
+      DEFAULT_REGION: ap-northeast-1
+      EXTRA_CORS_ALLOWED_HEADERS: >-
+        amz-sdk-invocation-id,
+        amz-sdk-request,
+        x-amz-content-sha256,
+        x-amz-date,
+        x-amz-target,
+        x-amz-user-agent
+    volumes:
+      - ./docker/localstack/docker-entrypoint-initaws.d:/docker-entrypoint-initaws.d:ro
