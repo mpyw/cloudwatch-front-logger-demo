@@ -1,4 +1,4 @@
-# Cloudwatch Front Logger Demo
+# CloudWatch Front Logger Demo
 
 Demo app for [mpyw/cloudwatch-front-logger](https://github.com/mpyw/cloudwatch-front-logger).
 
