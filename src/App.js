@@ -48,7 +48,7 @@ function App() {
               <td><code>{document.documentURI}</code></td>
             </tr>
             <tr>
-              <th>Cloudwatch Logs</th>
+              <th>CloudWatch Logs</th>
               <td><code><a className="App-link" target="_blank" href={endpoint} rel="noreferrer">{endpoint}</a></code></td>
             </tr>
           </tbody>
@@ -59,7 +59,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Cloudwatch Front Logger
+          CloudWatch Front Logger
         </a>
       </header>
     </div>
